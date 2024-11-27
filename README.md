@@ -1,4 +1,4 @@
-# End-to-End Azure Data Engineering Project
+# DataFusion
 
 This project demonstrates an end-to-end data engineering pipeline using Azure services, including Databricks, Azure Data Lake Storage (ADLS), Azure Data Factory, Azure Synapse Analytics, and Power BI for data processing, transformation, storage, and reporting. The project uses the AdventureWorksLT2017 database as the data source and provides insights via interactive visualizations.
 
