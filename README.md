@@ -10,7 +10,7 @@ This project aims to build a scalable and efficient data pipeline for data inges
 
 The Architecture diagram of the project is as follows:
 
-![Welcome Screen](Images/Architecture.png)
+![Architecture Diagram](Images/Architecture.png)
 
 ## Phases of the Project
 
@@ -91,6 +91,9 @@ Set up the following Azure resources:
 - **Interactive Filters**: Users can filter by region, product, or time period.
 - **Charts and Tables**: Line charts, bar charts, and pivot tables for comprehensive data analysis.
 - **Real-Time Data Updates**: Power BI dashboards are refreshed in near real-time with new data.
+
+- ![Reporting 1](Images/PowerBI1.jpeg)
+- ![Reporting 2](Images/PowerBI2.jpeg)
 
 ### 6. End-to-End Pipeline Testing
 
