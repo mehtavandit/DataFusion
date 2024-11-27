@@ -6,6 +6,12 @@ This project demonstrates an end-to-end data engineering pipeline using Azure se
 
 This project aims to build a scalable and efficient data pipeline for data ingestion, transformation, storage, and reporting. The AdventureWorksLT2017 database, a sample SQL Server database, serves as the source. The pipeline includes stages for data ingestion, data transformation, data storage, and data visualization using Power BI.
 
+## Architecture
+
+The Architecture diagram of the project is as follows:
+
+![Welcome Screen](Images/Architecture.png)
+
 ## Phases of the Project
 
 ### 1. Environment Setup
@@ -33,11 +39,8 @@ Set up the following Azure resources:
 - Used **Azure Data Factory** to ingest data from the AdventureWorksLT2017 SQL Server database.
 - Configured a self-hosted Integration Runtime for connecting on-premises data sources to Azure.
 - Data is ingested into the **Bronze Layer** of ADLS Gen2, ensuring the raw data is stored securely before any transformations are applied.
+- **Data in the Bronze Layer is stored in raw format**, without any transformations, representing the unprocessed state of the data.
 
-#### Ingestion Strategy:
-
-- Extracted tables like Customer, Product, SalesOrder, and OrderDetails from the SQL database.
-- Stored raw data in a highly scalable and secure Data Lake format (CSV/Parquet).
 
 ### 3. Data Transformation
 
@@ -50,11 +53,12 @@ Set up the following Azure resources:
 
 - Applied data validation steps, such as null checks and data type conversions.
 - Cleaned data by handling missing values, removing duplicates, and standardizing formats.
-- Joined multiple tables (e.g., SalesOrder with Customer and OrderDetails) to create a comprehensive view of the sales pipeline.
+- Joined multiple tables to create a comprehensive view of the sales pipeline.
 
 #### Storing Transformed Data:
 
-- After the transformation, the data is stored in the **Silver Layer** (for cleaned data) and **Gold Layer** (for aggregated or business-valuable data) in ADLS Gen2, which enables efficient querying in downstream systems.
+- After the transformation, the data is stored in the **Silver Layer** (for cleaned data) and **Gold Layer** (for aggregated data) within ADLS Gen2. This enables efficient querying and incremental updates in downstream systems.
+- **Data in the Silver and Gold Layers is stored in Delta format**, allowing for versioning, ACID transactions, and optimized performance during querying and further transformation.
 
 ### 4. Data Loading and Querying
 
