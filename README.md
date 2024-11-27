@@ -94,11 +94,7 @@ Set up the following Azure resources:
 
 - ![Reporting 1](Images/PowerBI1.jpeg)
 - ![Reporting 2](Images/PowerBI2.jpeg)
-- 
-<p align="center">
-  <img src="Images/PowerBI1.jpeg" alt="Image 1" width="45%" />
-  <img src="Images/PowerBI2.jpeg" alt="Image 2" width="45%" />
-</p>
+
 
 
 ### 6. End-to-End Pipeline Testing
